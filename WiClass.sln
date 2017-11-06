@@ -5,6 +5,21 @@ VisualStudioVersion = 14.0.25420.1
 MinimumVisualStudioVersion = 10.0.40219.1
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "WiClass", "WiClass\WiClass.csproj", "{821EB694-7301-4660-ACA2-94A3E104E00B}"
 EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Resources", "Resources", "{53865E87-75D1-4FE1-BBBE-7E5A956413FE}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "ICO", "ICO", "{ADA2CA0C-3105-4769-AF48-774287E746E5}"
+	ProjectSection(SolutionItems) = preProject
+		C:\Users\Winner\Desktop\back.png = C:\Users\Winner\Desktop\back.png
+		C:\Users\Winner\Desktop\background.png = C:\Users\Winner\Desktop\background.png
+		C:\Users\Winner\Desktop\eraser.png = C:\Users\Winner\Desktop\eraser.png
+		C:\Users\Winner\Desktop\interaction.png = C:\Users\Winner\Desktop\interaction.png
+		C:\Users\Winner\Desktop\mini.png = C:\Users\Winner\Desktop\mini.png
+		C:\Users\Winner\Desktop\pen.png = C:\Users\Winner\Desktop\pen.png
+		C:\Users\Winner\Desktop\redo.png = C:\Users\Winner\Desktop\redo.png
+		C:\Users\Winner\Desktop\select.png = C:\Users\Winner\Desktop\select.png
+		C:\Users\Winner\Desktop\tools.png = C:\Users\Winner\Desktop\tools.png
+	EndProjectSection
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -18,5 +33,8 @@ Global
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{ADA2CA0C-3105-4769-AF48-774287E746E5} = {53865E87-75D1-4FE1-BBBE-7E5A956413FE}
 	EndGlobalSection
 EndGlobal
