@@ -29,8 +29,6 @@
         private void InitializeComponent()
         {
             this.pnlToolsbar = new System.Windows.Forms.Panel();
-            this.picStartMenuico = new System.Windows.Forms.PictureBox();
-            this.picBackground = new System.Windows.Forms.PictureBox();
             this.ucMenuItem1 = new WiClass.UControl.ucMenuItem();
             this.ucMini = new WiClass.UControl.ucMenuItem();
             this.ucRedo = new WiClass.UControl.ucMenuItem();
@@ -40,6 +38,9 @@
             this.ucSelect = new WiClass.UControl.ucMenuItem();
             this.ucEraser = new WiClass.UControl.ucMenuItem();
             this.ucPen = new WiClass.UControl.ucMenuItem();
+            this.picStartMenuico = new System.Windows.Forms.PictureBox();
+            this.picBackground = new System.Windows.Forms.PictureBox();
+            this.pnlStartMenu = new System.Windows.Forms.Panel();
             this.pnlToolsbar.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStartMenuico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
@@ -64,34 +65,6 @@
             this.pnlToolsbar.Name = "pnlToolsbar";
             this.pnlToolsbar.Size = new System.Drawing.Size(1336, 66);
             this.pnlToolsbar.TabIndex = 0;
-            // 
-            // picStartMenuico
-            // 
-            this.picStartMenuico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.picStartMenuico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picStartMenuico.Image = global::WiClass.Properties.Resources.logo_50_;
-            this.picStartMenuico.Location = new System.Drawing.Point(0, 0);
-            this.picStartMenuico.Name = "picStartMenuico";
-            this.picStartMenuico.Padding = new System.Windows.Forms.Padding(5);
-            this.picStartMenuico.Size = new System.Drawing.Size(66, 66);
-            this.picStartMenuico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
-            this.picStartMenuico.TabIndex = 0;
-            this.picStartMenuico.TabStop = false;
-            this.picStartMenuico.MouseEnter += new System.EventHandler(this.picStartMenuico_MouseEnter);
-            this.picStartMenuico.MouseLeave += new System.EventHandler(this.picStartMenuico_MouseLeave);
-            this.picStartMenuico.MouseHover += new System.EventHandler(this.picStartMenuico_MouseHover);
-            // 
-            // picBackground
-            // 
-            this.picBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBackground.Location = new System.Drawing.Point(0, 0);
-            this.picBackground.Margin = new System.Windows.Forms.Padding(0);
-            this.picBackground.Name = "picBackground";
-            this.picBackground.Size = new System.Drawing.Size(1336, 557);
-            this.picBackground.TabIndex = 1;
-            this.picBackground.TabStop = false;
             // 
             // ucMenuItem1
             // 
@@ -231,12 +204,52 @@
             this.ucPen.Size = new System.Drawing.Size(66, 66);
             this.ucPen.TabIndex = 1;
             // 
+            // picStartMenuico
+            // 
+            this.picStartMenuico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.picStartMenuico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
+            this.picStartMenuico.Image = global::WiClass.Properties.Resources.logo_50_;
+            this.picStartMenuico.Location = new System.Drawing.Point(0, 0);
+            this.picStartMenuico.Name = "picStartMenuico";
+            this.picStartMenuico.Padding = new System.Windows.Forms.Padding(5);
+            this.picStartMenuico.Size = new System.Drawing.Size(66, 66);
+            this.picStartMenuico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
+            this.picStartMenuico.TabIndex = 0;
+            this.picStartMenuico.TabStop = false;
+            this.picStartMenuico.Click += new System.EventHandler(this.picStartMenuico_Click);
+            this.picStartMenuico.MouseEnter += new System.EventHandler(this.picStartMenuico_MouseEnter);
+            this.picStartMenuico.MouseLeave += new System.EventHandler(this.picStartMenuico_MouseLeave);
+            this.picStartMenuico.MouseHover += new System.EventHandler(this.picStartMenuico_MouseHover);
+            // 
+            // picBackground
+            // 
+            this.picBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBackground.Location = new System.Drawing.Point(0, 0);
+            this.picBackground.Margin = new System.Windows.Forms.Padding(0);
+            this.picBackground.Name = "picBackground";
+            this.picBackground.Size = new System.Drawing.Size(1336, 557);
+            this.picBackground.TabIndex = 1;
+            this.picBackground.TabStop = false;
+            // 
+            // pnlStartMenu
+            // 
+            this.pnlStartMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
+            this.pnlStartMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
+            this.pnlStartMenu.Location = new System.Drawing.Point(0, 276);
+            this.pnlStartMenu.Name = "pnlStartMenu";
+            this.pnlStartMenu.Size = new System.Drawing.Size(210, 281);
+            this.pnlStartMenu.TabIndex = 2;
+            this.pnlStartMenu.Visible = false;
+            // 
             // Main
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1336, 622);
             this.Controls.Add(this.pnlToolsbar);
+            this.Controls.Add(this.pnlStartMenu);
             this.Controls.Add(this.picBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
@@ -264,5 +277,6 @@
         private UControl.ucMenuItem ucRedo;
         private UControl.ucMenuItem ucMini;
         private UControl.ucMenuItem ucMenuItem1;
+        private System.Windows.Forms.Panel pnlStartMenu;
     }
 }
