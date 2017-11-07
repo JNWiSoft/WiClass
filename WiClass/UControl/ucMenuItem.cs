@@ -21,11 +21,12 @@ namespace WiClass.UControl
 {
     public partial class ucMenuItem : UserControl
     {
+        #region 自定义属性
         private Color bgcolor= Color.FromArgb(255, 67, 67, 67);
         private Color entercolor = Color.FromArgb(255, 53, 53, 53);
         private Color hovercolor = Color.FromArgb(255, 53, 53, 53);
         private Color leavecolor=Color.FromArgb(255, 67, 67, 67);
-        #region 自定义属性
+        
         //自定义属性--文字
         public string ItemText
         {
