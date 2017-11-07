@@ -96,10 +96,14 @@
             // ucMenuItem1
             // 
             this.ucMenuItem1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(51)))), ((int)(((byte)(102)))), ((int)(((byte)(255)))));
+            this.ucMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(128)))), ((int)(((byte)(253)))));
+            this.ucMenuItem1.Bgcolor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(128)))), ((int)(((byte)(253)))));
+            this.ucMenuItem1.Entercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.ucMenuItem1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ucMenuItem1.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
             this.ucMenuItem1.Imagesurl = global::WiClass.Properties.Resources.interaction;
             this.ucMenuItem1.ItemText = "互动";
+            this.ucMenuItem1.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(128)))), ((int)(((byte)(253)))));
             this.ucMenuItem1.Location = new System.Drawing.Point(1269, 0);
             this.ucMenuItem1.Margin = new System.Windows.Forms.Padding(0);
             this.ucMenuItem1.Name = "ucMenuItem1";
@@ -110,8 +114,12 @@
             // 
             this.ucMini.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ucMini.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucMini.Bgcolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucMini.Entercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.ucMini.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.ucMini.Imagesurl = global::WiClass.Properties.Resources.mini;
             this.ucMini.ItemText = "桌面";
+            this.ucMini.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
             this.ucMini.Location = new System.Drawing.Point(895, 0);
             this.ucMini.Name = "ucMini";
             this.ucMini.Size = new System.Drawing.Size(66, 66);
@@ -121,8 +129,12 @@
             // 
             this.ucRedo.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ucRedo.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucRedo.Bgcolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucRedo.Entercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.ucRedo.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.ucRedo.Imagesurl = global::WiClass.Properties.Resources.redo;
             this.ucRedo.ItemText = "恢复";
+            this.ucRedo.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
             this.ucRedo.Location = new System.Drawing.Point(827, 0);
             this.ucRedo.Name = "ucRedo";
             this.ucRedo.Size = new System.Drawing.Size(66, 66);
@@ -132,8 +144,12 @@
             // 
             this.ucBack.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ucBack.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucBack.Bgcolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucBack.Entercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.ucBack.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.ucBack.Imagesurl = global::WiClass.Properties.Resources.back;
             this.ucBack.ItemText = "撤销";
+            this.ucBack.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
             this.ucBack.Location = new System.Drawing.Point(759, 0);
             this.ucBack.Name = "ucBack";
             this.ucBack.Size = new System.Drawing.Size(66, 66);
@@ -143,8 +159,12 @@
             // 
             this.ucBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ucBackground.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucBackground.Bgcolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucBackground.Entercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.ucBackground.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.ucBackground.Imagesurl = global::WiClass.Properties.Resources.background;
             this.ucBackground.ItemText = "背景";
+            this.ucBackground.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
             this.ucBackground.Location = new System.Drawing.Point(691, 0);
             this.ucBackground.Name = "ucBackground";
             this.ucBackground.Size = new System.Drawing.Size(66, 66);
@@ -154,8 +174,12 @@
             // 
             this.ucTools.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ucTools.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucTools.Bgcolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucTools.Entercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.ucTools.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.ucTools.Imagesurl = global::WiClass.Properties.Resources.tools;
             this.ucTools.ItemText = "工具";
+            this.ucTools.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
             this.ucTools.Location = new System.Drawing.Point(623, 0);
             this.ucTools.Name = "ucTools";
             this.ucTools.Size = new System.Drawing.Size(66, 66);
@@ -166,8 +190,12 @@
             this.ucSelect.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ucSelect.AutoSizeMode = System.Windows.Forms.AutoSizeMode.GrowAndShrink;
             this.ucSelect.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucSelect.Bgcolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucSelect.Entercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.ucSelect.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.ucSelect.Imagesurl = global::WiClass.Properties.Resources.select;
             this.ucSelect.ItemText = "选择";
+            this.ucSelect.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
             this.ucSelect.Location = new System.Drawing.Point(419, 0);
             this.ucSelect.Name = "ucSelect";
             this.ucSelect.Size = new System.Drawing.Size(66, 66);
@@ -177,8 +205,12 @@
             // 
             this.ucEraser.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ucEraser.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucEraser.Bgcolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucEraser.Entercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.ucEraser.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.ucEraser.Imagesurl = global::WiClass.Properties.Resources.eraser;
             this.ucEraser.ItemText = "橡皮";
+            this.ucEraser.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
             this.ucEraser.Location = new System.Drawing.Point(555, 0);
             this.ucEraser.Name = "ucEraser";
             this.ucEraser.Size = new System.Drawing.Size(66, 66);
@@ -188,8 +220,12 @@
             // 
             this.ucPen.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
             this.ucPen.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucPen.Bgcolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.ucPen.Entercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
+            this.ucPen.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(53)))), ((int)(((byte)(53)))), ((int)(((byte)(53)))));
             this.ucPen.Imagesurl = global::WiClass.Properties.Resources.pen;
             this.ucPen.ItemText = "画笔";
+            this.ucPen.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
             this.ucPen.Location = new System.Drawing.Point(487, 0);
             this.ucPen.Name = "ucPen";
             this.ucPen.Size = new System.Drawing.Size(66, 66);

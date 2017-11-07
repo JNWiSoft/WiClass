@@ -38,6 +38,6 @@ namespace WiClass
             picStartMenuico.BackColor = Color.FromArgb(255, 67, 67, 67);
         }
 
- 
+
     }
 }

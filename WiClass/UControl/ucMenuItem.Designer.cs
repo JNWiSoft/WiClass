@@ -45,6 +45,7 @@
             // 
             // picIco
             // 
+            this.picIco.Enabled = false;
             this.picIco.Location = new System.Drawing.Point(17, 10);
             this.picIco.Name = "picIco";
             this.picIco.Size = new System.Drawing.Size(32, 32);
@@ -60,6 +61,9 @@
             this.Controls.Add(this.lblName);
             this.Name = "ucMenuItem";
             this.Size = new System.Drawing.Size(66, 66);
+            this.MouseEnter += new System.EventHandler(this.ucMenuItem_MouseEnter);
+            this.MouseLeave += new System.EventHandler(this.ucMenuItem_MouseLeave);
+            this.MouseHover += new System.EventHandler(this.ucMenuItem_MouseHover);
             ((System.ComponentModel.ISupportInitialize)(this.picIco)).EndInit();
             this.ResumeLayout(false);
 
