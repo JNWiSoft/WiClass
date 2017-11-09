@@ -36,10 +36,11 @@
             // lblName
             // 
             this.lblName.Anchor = System.Windows.Forms.AnchorStyles.None;
+            this.lblName.Font = new System.Drawing.Font("微软雅黑", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(0)));
             this.lblName.ForeColor = System.Drawing.Color.White;
-            this.lblName.Location = new System.Drawing.Point(1, 47);
+            this.lblName.Location = new System.Drawing.Point(1, 45);
             this.lblName.Name = "lblName";
-            this.lblName.Size = new System.Drawing.Size(66, 12);
+            this.lblName.Size = new System.Drawing.Size(66, 14);
             this.lblName.TabIndex = 0;
             this.lblName.TextAlign = System.Drawing.ContentAlignment.MiddleCenter;
             // 

@@ -9,24 +9,21 @@ using System.Threading.Tasks;
 using System.Windows.Forms;
 //==============================================================
 //  作者：Tony
-//  时间：2017年11月07日 12:18
-//  文件名：ucMenuItem.cs
+//  时间：2017年11月08日
+//  文件名：ucStartMenuItem.cs
 //  版本：Ver1.0.0  
-//  说明：功能菜单项用户控件
+//  说明：开始菜单项用户控件
 //  修改者：***
 //  修改说明：***
 //  修改日期：**/**/**
 //==============================================================
 namespace WiClass.UControl
 {
-    public partial class ucMenuItem : UserControl
+    public partial class ucStartMenuItem : UserControl
     {
+
         #region 自定义属性
-        private Color bgcolor= Color.FromArgb(255, 67, 67, 67);
-        private Color entercolor = Color.FromArgb(255, 53, 53, 53);
-        private Color hovercolor = Color.FromArgb(255, 53, 53, 53);
-        private Color leavecolor=Color.FromArgb(255, 67, 67, 67);
-        
+        private bool childitem = false;
         //自定义属性--文字
         public string ItemText
         {
@@ -52,76 +49,36 @@ namespace WiClass.UControl
                 picIco.Image = value;
             }
         }
-        //自定义属性--背景色
-        public Color Bgcolor
+        public bool ChildItem
         {
             get
             {
-                return bgcolor;
+                return childitem;
             }
-
             set
             {
-                bgcolor = value;
+                childitem = value;
             }
         }
-        //自定义属性--进入色
-        public Color Entercolor
-        {
-            get
-            {
-                return entercolor;
-            }
-
-            set
-            {
-                entercolor = value;
-            }
-        }
-        //自定义属性--Hover色
-        public Color Hovercolor
-        {
-            get
-            {
-                return hovercolor;
-            }
-
-            set
-            {
-                hovercolor = value;
-            }
-        }
-        //自定义属性--Leave色
-        public Color Leavecolor
-        {
-            get
-            {
-                return leavecolor;
-            }
-
-            set
-            {
-                leavecolor = value;
-            }
-        }
-
         #endregion
-        public ucMenuItem()
+
+        public ucStartMenuItem()
         {
             InitializeComponent();
-            SetControlEnabled(lblName, false);
-            init();
         }
-
         #region 初始设置
         /// <summary>
         /// 初始设置
         /// </summary>
         public void init()
         {
-            this.BackColor = Bgcolor;
+            if (!childitem)
+            {
+                picArrow.Visible = false;
+            }
         }
         #endregion
+
 
         #region 重设Control在Enable状态下的ForeColor值
 
@@ -147,21 +104,6 @@ namespace WiClass.UControl
             { SetWindowLong(c.Handle, GWL_STYLE, WS_DISABLED + GetWindowLong(c.Handle, GWL_STYLE)); }
         }
         #endregion
-        #region 按钮背景交互状态事件
-        private void ucMenuItem_MouseHover(object sender, EventArgs e)
-        {
-            this.BackColor = hovercolor;
-        }
 
-        private void ucMenuItem_MouseEnter(object sender, EventArgs e)
-        {
-            this.BackColor = entercolor;
-        }
-
-        private void ucMenuItem_MouseLeave(object sender, EventArgs e)
-        {
-            this.BackColor = leavecolor;
-        }
-        #endregion
     }
 }

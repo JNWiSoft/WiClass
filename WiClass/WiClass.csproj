@@ -46,6 +46,14 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Class\clsMenuColor.cs" />
+    <Compile Include="Class\clsMyMenuRender.cs" />
+    <Compile Include="Class\cpMyMenu.cs">
+      <SubType>Component</SubType>
+    </Compile>
+    <Compile Include="Class\cpMyMenu.Designer.cs">
+      <DependentUpon>cpMyMenu.cs</DependentUpon>
+    </Compile>
     <Compile Include="Login.cs">
       <SubType>Form</SubType>
     </Compile>
@@ -66,6 +74,12 @@
     <Compile Include="UControl\ucMenuItem.Designer.cs">
       <DependentUpon>ucMenuItem.cs</DependentUpon>
     </Compile>
+    <Compile Include="UControl\ucStartMenuItem.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\ucStartMenuItem.Designer.cs">
+      <DependentUpon>ucStartMenuItem.cs</DependentUpon>
+    </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
     </EmbeddedResource>
@@ -84,6 +98,9 @@
     </Compile>
     <EmbeddedResource Include="UControl\ucMenuItem.resx">
       <DependentUpon>ucMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\ucStartMenuItem.resx">
+      <DependentUpon>ucStartMenuItem.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -130,6 +147,27 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\interaction.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\Arrow.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\logout.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\help.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\setting.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\output.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\save.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\open.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

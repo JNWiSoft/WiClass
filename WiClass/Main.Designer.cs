@@ -28,7 +28,10 @@
         /// </summary>
         private void InitializeComponent()
         {
+            this.components = new System.ComponentModel.Container();
+            System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlToolsbar = new System.Windows.Forms.Panel();
+            this.cmsStartMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
             this.ucMenuItem1 = new WiClass.UControl.ucMenuItem();
             this.ucMini = new WiClass.UControl.ucMenuItem();
             this.ucRedo = new WiClass.UControl.ucMenuItem();
@@ -40,8 +43,16 @@
             this.ucPen = new WiClass.UControl.ucMenuItem();
             this.picStartMenuico = new System.Windows.Forms.PictureBox();
             this.picBackground = new System.Windows.Forms.PictureBox();
-            this.pnlStartMenu = new System.Windows.Forms.Panel();
+            this.tsmiSave = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiOutput = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiSetting = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
+            this.使用说明ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiLogout = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.pnlToolsbar.SuspendLayout();
+            this.cmsStartMenu.SuspendLayout();
             ((System.ComponentModel.ISupportInitialize)(this.picStartMenuico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.SuspendLayout();
@@ -65,6 +76,19 @@
             this.pnlToolsbar.Name = "pnlToolsbar";
             this.pnlToolsbar.Size = new System.Drawing.Size(1336, 66);
             this.pnlToolsbar.TabIndex = 0;
+            // 
+            // cmsStartMenu
+            // 
+            this.cmsStartMenu.DropShadowEnabled = false;
+            this.cmsStartMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiOpen,
+            this.tsmiSave,
+            this.tsmiOutput,
+            this.tsmiSetting,
+            this.tsmiHelp,
+            this.tsmiLogout});
+            this.cmsStartMenu.Name = "contextMenuStrip1";
+            this.cmsStartMenu.Size = new System.Drawing.Size(167, 242);
             // 
             // ucMenuItem1
             // 
@@ -207,8 +231,8 @@
             // picStartMenuico
             // 
             this.picStartMenuico.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
+            this.picStartMenuico.BackgroundImage = ((System.Drawing.Image)(resources.GetObject("picStartMenuico.BackgroundImage")));
             this.picStartMenuico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
-            this.picStartMenuico.Image = global::WiClass.Properties.Resources.logo_50_;
             this.picStartMenuico.Location = new System.Drawing.Point(0, 0);
             this.picStartMenuico.Name = "picStartMenuico";
             this.picStartMenuico.Padding = new System.Windows.Forms.Padding(5);
@@ -233,15 +257,75 @@
             this.picBackground.TabIndex = 1;
             this.picBackground.TabStop = false;
             // 
-            // pnlStartMenu
+            // tsmiSave
             // 
-            this.pnlStartMenu.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left)));
-            this.pnlStartMenu.BackColor = System.Drawing.SystemColors.ActiveCaption;
-            this.pnlStartMenu.Location = new System.Drawing.Point(0, 276);
-            this.pnlStartMenu.Name = "pnlStartMenu";
-            this.pnlStartMenu.Size = new System.Drawing.Size(210, 281);
-            this.pnlStartMenu.TabIndex = 2;
-            this.pnlStartMenu.Visible = false;
+            this.tsmiSave.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.tsmiSave.Image = global::WiClass.Properties.Resources.save;
+            this.tsmiSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmiSave.Name = "tsmiSave";
+            this.tsmiSave.Size = new System.Drawing.Size(166, 36);
+            this.tsmiSave.Text = "保存板书";
+            // 
+            // tsmiOutput
+            // 
+            this.tsmiOutput.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.tsmiOutput.Image = global::WiClass.Properties.Resources.output;
+            this.tsmiOutput.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmiOutput.Name = "tsmiOutput";
+            this.tsmiOutput.Size = new System.Drawing.Size(166, 36);
+            this.tsmiOutput.Text = "导出课堂";
+            // 
+            // tsmiSetting
+            // 
+            this.tsmiSetting.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.tsmiSetting.Image = global::WiClass.Properties.Resources.setting;
+            this.tsmiSetting.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmiSetting.Name = "tsmiSetting";
+            this.tsmiSetting.Size = new System.Drawing.Size(166, 36);
+            this.tsmiSetting.Text = "系统设置";
+            // 
+            // tsmiHelp
+            // 
+            this.tsmiHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.使用说明ToolStripMenuItem,
+            this.关于ToolStripMenuItem});
+            this.tsmiHelp.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.tsmiHelp.Image = ((System.Drawing.Image)(resources.GetObject("tsmiHelp.Image")));
+            this.tsmiHelp.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmiHelp.Name = "tsmiHelp";
+            this.tsmiHelp.Size = new System.Drawing.Size(166, 36);
+            this.tsmiHelp.Text = "帮助";
+            // 
+            // 使用说明ToolStripMenuItem
+            // 
+            this.使用说明ToolStripMenuItem.Name = "使用说明ToolStripMenuItem";
+            this.使用说明ToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.使用说明ToolStripMenuItem.Text = "使用说明";
+            // 
+            // 关于ToolStripMenuItem
+            // 
+            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
+            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
+            this.关于ToolStripMenuItem.Text = "关于";
+            // 
+            // tsmiLogout
+            // 
+            this.tsmiLogout.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.tsmiLogout.Image = global::WiClass.Properties.Resources.logout;
+            this.tsmiLogout.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmiLogout.Name = "tsmiLogout";
+            this.tsmiLogout.Size = new System.Drawing.Size(166, 36);
+            this.tsmiLogout.Text = "退出";
+            this.tsmiLogout.Click += new System.EventHandler(this.tsmiLogout_Click);
+            // 
+            // tsmiOpen
+            // 
+            this.tsmiOpen.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
+            this.tsmiOpen.Image = global::WiClass.Properties.Resources.open;
+            this.tsmiOpen.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
+            this.tsmiOpen.Name = "tsmiOpen";
+            this.tsmiOpen.Size = new System.Drawing.Size(166, 36);
+            this.tsmiOpen.Text = "打开板书";
             // 
             // Main
             // 
@@ -249,7 +333,6 @@
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1336, 622);
             this.Controls.Add(this.pnlToolsbar);
-            this.Controls.Add(this.pnlStartMenu);
             this.Controls.Add(this.picBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
             this.Name = "Main";
@@ -257,6 +340,7 @@
             this.Text = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
             this.pnlToolsbar.ResumeLayout(false);
+            this.cmsStartMenu.ResumeLayout(false);
             ((System.ComponentModel.ISupportInitialize)(this.picStartMenuico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
             this.ResumeLayout(false);
@@ -277,6 +361,14 @@
         private UControl.ucMenuItem ucRedo;
         private UControl.ucMenuItem ucMini;
         private UControl.ucMenuItem ucMenuItem1;
-        private System.Windows.Forms.Panel pnlStartMenu;
+        private System.Windows.Forms.ContextMenuStrip cmsStartMenu;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSave;
+        private System.Windows.Forms.ToolStripMenuItem tsmiOutput;
+        private System.Windows.Forms.ToolStripMenuItem tsmiSetting;
+        private System.Windows.Forms.ToolStripMenuItem tsmiHelp;
+        private System.Windows.Forms.ToolStripMenuItem tsmiLogout;
+        private System.Windows.Forms.ToolStripMenuItem 使用说明ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiOpen;
     }
 }
