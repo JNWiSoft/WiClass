@@ -22,7 +22,7 @@ namespace WiClass
 {
     public partial class Main : Form
     {
-
+        private int ibtselect = 0;
         public Main()
         {
             InitializeComponent();
@@ -79,6 +79,121 @@ namespace WiClass
         {
             Application.Exit();
         }
+
         #endregion
+
+        #region 互动按钮点击事件  2017-11-15 Tony
+        //书写按钮
+        private void btnWrite_Click(object sender, EventArgs e)
+        {
+            //恢复其他按钮选中状态
+            if (ibtselect != 1)
+            {
+                btnSelectd();
+            }
+            if (btnWrite.Blselected)
+            {
+                btnWrite.Blselected = false;
+                btnWrite.pnlIItemBg_Selected();
+                ibtselect = 0;
+                //TODO 关闭书写状态操作
+            }
+            else
+            {
+                btnWrite.Blselected = true;
+                btnWrite.pnlIItemBg_Selected();
+                ibtselect = 1;
+                //TODO 书写状态加载控件
+            }
+        }
+        //选择按钮
+        private void btnChoice_Click(object sender, EventArgs e)
+        {
+            //恢复其他按钮选中状态
+            if (ibtselect != 2)
+            {
+                btnSelectd();
+            }
+            if (btnChoice.Blselected)
+            {
+                btnChoice.Blselected = false;
+                btnChoice.pnlIItemBg_Selected();
+                ibtselect = 0;
+                //TODO 关闭书写状态操作
+            }
+            else
+            {
+                btnChoice.Blselected = true;
+                btnChoice.pnlIItemBg_Selected();
+                ibtselect = 2;
+                //TODO 书写状态加载控件
+            }
+        }
+        //测试按钮
+        private void btnTest_Click(object sender, EventArgs e)
+        {
+            //恢复其他按钮选中状态
+            if (ibtselect != 3)
+            {
+                btnSelectd();
+            }
+            if (btnTest.Blselected)
+            {
+                btnTest.Blselected = false;
+                btnTest.pnlIItemBg_Selected();
+                ibtselect = 0;
+                //TODO 关闭书写状态操作
+            }
+            else
+            {
+                btnTest.Blselected = true;
+                btnTest.pnlIItemBg_Selected();
+                ibtselect = 3;
+                //TODO 书写状态加载控件
+            }
+        }
+        #endregion
+
+        #region 按钮选中状态处理 2017-11-15 Tony
+        /// <summary>
+        /// 按钮选中状态统一处理
+        /// </summary>
+        private void btnSelectd()
+        {
+
+            switch(ibtselect)
+             {
+                case 0:
+                    btnWrite.Blselected = false;
+                    btnWrite.pnlIItemBg_Selected();
+                    btnChoice.Blselected = false;
+                    btnChoice.pnlIItemBg_Selected();
+                    btnTest.Blselected = false;
+                    btnTest.pnlIItemBg_Selected();
+                    break;
+                case 1:
+                    //TODO 关闭书写按钮当前状态的相关操作
+                    btnWrite.Blselected = false;
+                    btnWrite.pnlIItemBg_Selected();
+                   
+                    break;
+                case 2:
+                    //TODO 关闭选择按钮当前状态的相关操作
+                    btnChoice.Blselected = false;
+                    btnChoice.pnlIItemBg_Selected();
+                   
+                    break;
+                case 3:
+                    //TODO 关闭测试按钮当前状态的相关操作
+                    btnTest.Blselected = false;
+                    btnTest.pnlIItemBg_Selected();
+                    
+                    break;
+
+            }
+        }
+        #endregion
+
+
     }
 }

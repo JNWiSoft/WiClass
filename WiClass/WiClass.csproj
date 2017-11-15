@@ -68,6 +68,12 @@
     </Compile>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="UControl\ucInterButton.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\ucInterButton.Designer.cs">
+      <DependentUpon>ucInterButton.cs</DependentUpon>
+    </Compile>
     <Compile Include="UControl\ucMenuItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -96,6 +102,9 @@
       <DependentUpon>Resources.resx</DependentUpon>
       <DesignTime>True</DesignTime>
     </Compile>
+    <EmbeddedResource Include="UControl\ucInterButton.resx">
+      <DependentUpon>ucInterButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UControl\ucMenuItem.resx">
       <DependentUpon>ucMenuItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -168,6 +177,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\open.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\interaction%2820%29.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\icowrite.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\write.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\choice6.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\test11.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
