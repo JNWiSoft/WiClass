@@ -31,29 +31,29 @@
             this.components = new System.ComponentModel.Container();
             System.ComponentModel.ComponentResourceManager resources = new System.ComponentModel.ComponentResourceManager(typeof(Main));
             this.pnlToolsbar = new System.Windows.Forms.Panel();
-            this.picStartMenuico = new System.Windows.Forms.PictureBox();
             this.cmsStartMenu = new System.Windows.Forms.ContextMenuStrip(this.components);
+            this.pnlInterPanel = new System.Windows.Forms.Panel();
+            this.pnlStudentlist = new System.Windows.Forms.Panel();
+            this.pnlLine1 = new System.Windows.Forms.Panel();
+            this.panel2 = new System.Windows.Forms.Panel();
+            this.pnlInformation = new System.Windows.Forms.Panel();
+            this.pnlIntertitle = new System.Windows.Forms.Panel();
+            this.lblTitle = new System.Windows.Forms.Label();
+            this.picTitleIco = new System.Windows.Forms.PictureBox();
+            this.picStartMenuico = new System.Windows.Forms.PictureBox();
+            this.picBackground = new System.Windows.Forms.PictureBox();
             this.tsmiOpen = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSave = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiOutput = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiSetting = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiHelp = new System.Windows.Forms.ToolStripMenuItem();
-            this.使用说明ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
-            this.关于ToolStripMenuItem = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiMan = new System.Windows.Forms.ToolStripMenuItem();
+            this.tsmiAbout = new System.Windows.Forms.ToolStripMenuItem();
             this.tsmiLogout = new System.Windows.Forms.ToolStripMenuItem();
-            this.panel1 = new System.Windows.Forms.Panel();
-            this.pnlStudentlist = new System.Windows.Forms.Panel();
-            this.panel3 = new System.Windows.Forms.Panel();
-            this.panel2 = new System.Windows.Forms.Panel();
-            this.pnlInformation = new System.Windows.Forms.Panel();
-            this.pnlIntertitle = new System.Windows.Forms.Panel();
-            this.lblTitle = new System.Windows.Forms.Label();
-            this.pictureBox1 = new System.Windows.Forms.PictureBox();
-            this.picBackground = new System.Windows.Forms.PictureBox();
             this.btnTest = new WiClass.UControl.ucInterButton();
             this.btnChoice = new WiClass.UControl.ucInterButton();
             this.btnWrite = new WiClass.UControl.ucInterButton();
-            this.ucMenuItem1 = new WiClass.UControl.ucMenuItem();
+            this.ucInteract = new WiClass.UControl.ucMenuItem();
             this.ucMini = new WiClass.UControl.ucMenuItem();
             this.ucRedo = new WiClass.UControl.ucMenuItem();
             this.ucBack = new WiClass.UControl.ucMenuItem();
@@ -63,12 +63,12 @@
             this.ucEraser = new WiClass.UControl.ucMenuItem();
             this.ucPen = new WiClass.UControl.ucMenuItem();
             this.pnlToolsbar.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.picStartMenuico)).BeginInit();
             this.cmsStartMenu.SuspendLayout();
-            this.panel1.SuspendLayout();
+            this.pnlInterPanel.SuspendLayout();
             this.panel2.SuspendLayout();
             this.pnlIntertitle.SuspendLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTitleIco)).BeginInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picStartMenuico)).BeginInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).BeginInit();
             this.SuspendLayout();
             // 
@@ -77,7 +77,7 @@
             this.pnlToolsbar.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlToolsbar.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(81)))), ((int)(((byte)(81)))), ((int)(((byte)(81)))));
-            this.pnlToolsbar.Controls.Add(this.ucMenuItem1);
+            this.pnlToolsbar.Controls.Add(this.ucInteract);
             this.pnlToolsbar.Controls.Add(this.ucMini);
             this.pnlToolsbar.Controls.Add(this.ucRedo);
             this.pnlToolsbar.Controls.Add(this.ucBack);
@@ -91,6 +91,112 @@
             this.pnlToolsbar.Name = "pnlToolsbar";
             this.pnlToolsbar.Size = new System.Drawing.Size(1336, 66);
             this.pnlToolsbar.TabIndex = 0;
+            // 
+            // cmsStartMenu
+            // 
+            this.cmsStartMenu.DropShadowEnabled = false;
+            this.cmsStartMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
+            this.tsmiOpen,
+            this.tsmiSave,
+            this.tsmiOutput,
+            this.tsmiSetting,
+            this.tsmiHelp,
+            this.tsmiLogout});
+            this.cmsStartMenu.Name = "contextMenuStrip1";
+            this.cmsStartMenu.Size = new System.Drawing.Size(148, 220);
+            // 
+            // pnlInterPanel
+            // 
+            this.pnlInterPanel.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlInterPanel.BackColor = System.Drawing.SystemColors.Control;
+            this.pnlInterPanel.Controls.Add(this.pnlStudentlist);
+            this.pnlInterPanel.Controls.Add(this.pnlLine1);
+            this.pnlInterPanel.Controls.Add(this.panel2);
+            this.pnlInterPanel.Controls.Add(this.pnlInformation);
+            this.pnlInterPanel.Controls.Add(this.pnlIntertitle);
+            this.pnlInterPanel.Location = new System.Drawing.Point(961, 0);
+            this.pnlInterPanel.Name = "pnlInterPanel";
+            this.pnlInterPanel.Size = new System.Drawing.Size(375, 556);
+            this.pnlInterPanel.TabIndex = 2;
+            this.pnlInterPanel.Visible = false;
+            // 
+            // pnlStudentlist
+            // 
+            this.pnlStudentlist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlStudentlist.BackColor = System.Drawing.Color.DimGray;
+            this.pnlStudentlist.Location = new System.Drawing.Point(0, 290);
+            this.pnlStudentlist.Name = "pnlStudentlist";
+            this.pnlStudentlist.Size = new System.Drawing.Size(375, 187);
+            this.pnlStudentlist.TabIndex = 4;
+            // 
+            // pnlLine1
+            // 
+            this.pnlLine1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlLine1.BackColor = System.Drawing.Color.LightGray;
+            this.pnlLine1.Location = new System.Drawing.Point(0, 477);
+            this.pnlLine1.Name = "pnlLine1";
+            this.pnlLine1.Size = new System.Drawing.Size(375, 1);
+            this.pnlLine1.TabIndex = 3;
+            // 
+            // panel2
+            // 
+            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.panel2.BackColor = System.Drawing.Color.White;
+            this.panel2.Controls.Add(this.btnTest);
+            this.panel2.Controls.Add(this.btnChoice);
+            this.panel2.Controls.Add(this.btnWrite);
+            this.panel2.Location = new System.Drawing.Point(0, 477);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(375, 80);
+            this.panel2.TabIndex = 2;
+            // 
+            // pnlInformation
+            // 
+            this.pnlInformation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlInformation.BackColor = System.Drawing.Color.White;
+            this.pnlInformation.Location = new System.Drawing.Point(0, 40);
+            this.pnlInformation.Name = "pnlInformation";
+            this.pnlInformation.Size = new System.Drawing.Size(375, 250);
+            this.pnlInformation.TabIndex = 1;
+            // 
+            // pnlIntertitle
+            // 
+            this.pnlIntertitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.pnlIntertitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(128)))), ((int)(((byte)(253)))));
+            this.pnlIntertitle.Controls.Add(this.lblTitle);
+            this.pnlIntertitle.Controls.Add(this.picTitleIco);
+            this.pnlIntertitle.Location = new System.Drawing.Point(0, 0);
+            this.pnlIntertitle.Margin = new System.Windows.Forms.Padding(0);
+            this.pnlIntertitle.Name = "pnlIntertitle";
+            this.pnlIntertitle.Size = new System.Drawing.Size(375, 40);
+            this.pnlIntertitle.TabIndex = 0;
+            // 
+            // lblTitle
+            // 
+            this.lblTitle.AutoSize = true;
+            this.lblTitle.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.lblTitle.ForeColor = System.Drawing.Color.White;
+            this.lblTitle.Location = new System.Drawing.Point(28, 10);
+            this.lblTitle.Name = "lblTitle";
+            this.lblTitle.Size = new System.Drawing.Size(65, 19);
+            this.lblTitle.TabIndex = 1;
+            this.lblTitle.Text = "课堂互动";
+            // 
+            // picTitleIco
+            // 
+            this.picTitleIco.Image = ((System.Drawing.Image)(resources.GetObject("picTitleIco.Image")));
+            this.picTitleIco.Location = new System.Drawing.Point(5, 10);
+            this.picTitleIco.Name = "picTitleIco";
+            this.picTitleIco.Size = new System.Drawing.Size(20, 20);
+            this.picTitleIco.TabIndex = 0;
+            this.picTitleIco.TabStop = false;
             // 
             // picStartMenuico
             // 
@@ -109,18 +215,17 @@
             this.picStartMenuico.MouseLeave += new System.EventHandler(this.picStartMenuico_MouseLeave);
             this.picStartMenuico.MouseHover += new System.EventHandler(this.picStartMenuico_MouseHover);
             // 
-            // cmsStartMenu
+            // picBackground
             // 
-            this.cmsStartMenu.DropShadowEnabled = false;
-            this.cmsStartMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.tsmiOpen,
-            this.tsmiSave,
-            this.tsmiOutput,
-            this.tsmiSetting,
-            this.tsmiHelp,
-            this.tsmiLogout});
-            this.cmsStartMenu.Name = "contextMenuStrip1";
-            this.cmsStartMenu.Size = new System.Drawing.Size(148, 220);
+            this.picBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
+            | System.Windows.Forms.AnchorStyles.Left) 
+            | System.Windows.Forms.AnchorStyles.Right)));
+            this.picBackground.Location = new System.Drawing.Point(0, 0);
+            this.picBackground.Margin = new System.Windows.Forms.Padding(0);
+            this.picBackground.Name = "picBackground";
+            this.picBackground.Size = new System.Drawing.Size(1336, 557);
+            this.picBackground.TabIndex = 1;
+            this.picBackground.TabStop = false;
             // 
             // tsmiOpen
             // 
@@ -161,8 +266,8 @@
             // tsmiHelp
             // 
             this.tsmiHelp.DropDownItems.AddRange(new System.Windows.Forms.ToolStripItem[] {
-            this.使用说明ToolStripMenuItem,
-            this.关于ToolStripMenuItem});
+            this.tsmiMan,
+            this.tsmiAbout});
             this.tsmiHelp.Font = new System.Drawing.Font("Microsoft YaHei UI", 10F);
             this.tsmiHelp.Image = ((System.Drawing.Image)(resources.GetObject("tsmiHelp.Image")));
             this.tsmiHelp.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
@@ -170,17 +275,17 @@
             this.tsmiHelp.Size = new System.Drawing.Size(147, 36);
             this.tsmiHelp.Text = "帮助";
             // 
-            // 使用说明ToolStripMenuItem
+            // tsmiMan
             // 
-            this.使用说明ToolStripMenuItem.Name = "使用说明ToolStripMenuItem";
-            this.使用说明ToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
-            this.使用说明ToolStripMenuItem.Text = "使用说明";
+            this.tsmiMan.Name = "tsmiMan";
+            this.tsmiMan.Size = new System.Drawing.Size(134, 24);
+            this.tsmiMan.Text = "使用说明";
             // 
-            // 关于ToolStripMenuItem
+            // tsmiAbout
             // 
-            this.关于ToolStripMenuItem.Name = "关于ToolStripMenuItem";
-            this.关于ToolStripMenuItem.Size = new System.Drawing.Size(134, 24);
-            this.关于ToolStripMenuItem.Text = "关于";
+            this.tsmiAbout.Name = "tsmiAbout";
+            this.tsmiAbout.Size = new System.Drawing.Size(134, 24);
+            this.tsmiAbout.Text = "关于";
             // 
             // tsmiLogout
             // 
@@ -191,110 +296,6 @@
             this.tsmiLogout.Size = new System.Drawing.Size(147, 36);
             this.tsmiLogout.Text = "退出";
             this.tsmiLogout.Click += new System.EventHandler(this.tsmiLogout_Click);
-            // 
-            // panel1
-            // 
-            this.panel1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel1.BackColor = System.Drawing.SystemColors.Control;
-            this.panel1.Controls.Add(this.pnlStudentlist);
-            this.panel1.Controls.Add(this.panel3);
-            this.panel1.Controls.Add(this.panel2);
-            this.panel1.Controls.Add(this.pnlInformation);
-            this.panel1.Controls.Add(this.pnlIntertitle);
-            this.panel1.Location = new System.Drawing.Point(961, 0);
-            this.panel1.Name = "panel1";
-            this.panel1.Size = new System.Drawing.Size(375, 556);
-            this.panel1.TabIndex = 2;
-            // 
-            // pnlStudentlist
-            // 
-            this.pnlStudentlist.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlStudentlist.BackColor = System.Drawing.Color.White;
-            this.pnlStudentlist.Location = new System.Drawing.Point(0, 290);
-            this.pnlStudentlist.Name = "pnlStudentlist";
-            this.pnlStudentlist.Size = new System.Drawing.Size(375, 187);
-            this.pnlStudentlist.TabIndex = 4;
-            // 
-            // panel3
-            // 
-            this.panel3.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel3.BackColor = System.Drawing.Color.LightGray;
-            this.panel3.Location = new System.Drawing.Point(0, 477);
-            this.panel3.Name = "panel3";
-            this.panel3.Size = new System.Drawing.Size(375, 1);
-            this.panel3.TabIndex = 3;
-            // 
-            // panel2
-            // 
-            this.panel2.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.panel2.BackColor = System.Drawing.Color.White;
-            this.panel2.Controls.Add(this.btnTest);
-            this.panel2.Controls.Add(this.btnChoice);
-            this.panel2.Controls.Add(this.btnWrite);
-            this.panel2.Location = new System.Drawing.Point(0, 477);
-            this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(375, 80);
-            this.panel2.TabIndex = 2;
-            // 
-            // pnlInformation
-            // 
-            this.pnlInformation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlInformation.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(192)))), ((int)(((byte)(255)))), ((int)(((byte)(255)))));
-            this.pnlInformation.Location = new System.Drawing.Point(0, 40);
-            this.pnlInformation.Name = "pnlInformation";
-            this.pnlInformation.Size = new System.Drawing.Size(375, 250);
-            this.pnlInformation.TabIndex = 1;
-            // 
-            // pnlIntertitle
-            // 
-            this.pnlIntertitle.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.pnlIntertitle.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(128)))), ((int)(((byte)(253)))));
-            this.pnlIntertitle.Controls.Add(this.lblTitle);
-            this.pnlIntertitle.Controls.Add(this.pictureBox1);
-            this.pnlIntertitle.Location = new System.Drawing.Point(0, 0);
-            this.pnlIntertitle.Margin = new System.Windows.Forms.Padding(0);
-            this.pnlIntertitle.Name = "pnlIntertitle";
-            this.pnlIntertitle.Size = new System.Drawing.Size(375, 40);
-            this.pnlIntertitle.TabIndex = 0;
-            // 
-            // lblTitle
-            // 
-            this.lblTitle.AutoSize = true;
-            this.lblTitle.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(28, 10);
-            this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(65, 19);
-            this.lblTitle.TabIndex = 1;
-            this.lblTitle.Text = "课堂互动";
-            // 
-            // pictureBox1
-            // 
-            this.pictureBox1.Image = ((System.Drawing.Image)(resources.GetObject("pictureBox1.Image")));
-            this.pictureBox1.Location = new System.Drawing.Point(5, 10);
-            this.pictureBox1.Name = "pictureBox1";
-            this.pictureBox1.Size = new System.Drawing.Size(20, 20);
-            this.pictureBox1.TabIndex = 0;
-            this.pictureBox1.TabStop = false;
-            // 
-            // picBackground
-            // 
-            this.picBackground.Anchor = ((System.Windows.Forms.AnchorStyles)((((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Bottom) 
-            | System.Windows.Forms.AnchorStyles.Left) 
-            | System.Windows.Forms.AnchorStyles.Right)));
-            this.picBackground.Location = new System.Drawing.Point(0, 0);
-            this.picBackground.Margin = new System.Windows.Forms.Padding(0);
-            this.picBackground.Name = "picBackground";
-            this.picBackground.Size = new System.Drawing.Size(1336, 557);
-            this.picBackground.TabIndex = 1;
-            this.picBackground.TabStop = false;
             // 
             // btnTest
             // 
@@ -338,22 +339,23 @@
             this.btnWrite.TabIndex = 0;
             this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
             // 
-            // ucMenuItem1
+            // ucInteract
             // 
-            this.ucMenuItem1.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
-            this.ucMenuItem1.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(128)))), ((int)(((byte)(253)))));
-            this.ucMenuItem1.Bgcolor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(128)))), ((int)(((byte)(253)))));
-            this.ucMenuItem1.Entercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.ucMenuItem1.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
-            this.ucMenuItem1.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
-            this.ucMenuItem1.Imagesurl = global::WiClass.Properties.Resources.interaction;
-            this.ucMenuItem1.ItemText = "互动";
-            this.ucMenuItem1.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(128)))), ((int)(((byte)(253)))));
-            this.ucMenuItem1.Location = new System.Drawing.Point(1269, 0);
-            this.ucMenuItem1.Margin = new System.Windows.Forms.Padding(0);
-            this.ucMenuItem1.Name = "ucMenuItem1";
-            this.ucMenuItem1.Size = new System.Drawing.Size(66, 66);
-            this.ucMenuItem1.TabIndex = 8;
+            this.ucInteract.Anchor = ((System.Windows.Forms.AnchorStyles)((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Right)));
+            this.ucInteract.BackColor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(128)))), ((int)(((byte)(253)))));
+            this.ucInteract.Bgcolor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(128)))), ((int)(((byte)(253)))));
+            this.ucInteract.Entercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.ucInteract.Font = new System.Drawing.Font("宋体", 9F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.ucInteract.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(122)))), ((int)(((byte)(204)))));
+            this.ucInteract.Imagesurl = global::WiClass.Properties.Resources.interaction;
+            this.ucInteract.ItemText = "互动";
+            this.ucInteract.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(128)))), ((int)(((byte)(253)))));
+            this.ucInteract.Location = new System.Drawing.Point(1269, 0);
+            this.ucInteract.Margin = new System.Windows.Forms.Padding(0);
+            this.ucInteract.Name = "ucInteract";
+            this.ucInteract.Size = new System.Drawing.Size(66, 66);
+            this.ucInteract.TabIndex = 8;
+            this.ucInteract.Click += new System.EventHandler(this.ucInteract_Click);
             // 
             // ucMini
             // 
@@ -481,7 +483,7 @@
             this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
             this.ClientSize = new System.Drawing.Size(1336, 622);
-            this.Controls.Add(this.panel1);
+            this.Controls.Add(this.pnlInterPanel);
             this.Controls.Add(this.pnlToolsbar);
             this.Controls.Add(this.picBackground);
             this.FormBorderStyle = System.Windows.Forms.FormBorderStyle.None;
@@ -489,14 +491,15 @@
             this.StartPosition = System.Windows.Forms.FormStartPosition.CenterScreen;
             this.Text = "Main";
             this.WindowState = System.Windows.Forms.FormWindowState.Maximized;
+            this.Load += new System.EventHandler(this.Main_Load);
             this.pnlToolsbar.ResumeLayout(false);
-            ((System.ComponentModel.ISupportInitialize)(this.picStartMenuico)).EndInit();
             this.cmsStartMenu.ResumeLayout(false);
-            this.panel1.ResumeLayout(false);
+            this.pnlInterPanel.ResumeLayout(false);
             this.panel2.ResumeLayout(false);
             this.pnlIntertitle.ResumeLayout(false);
             this.pnlIntertitle.PerformLayout();
-            ((System.ComponentModel.ISupportInitialize)(this.pictureBox1)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picTitleIco)).EndInit();
+            ((System.ComponentModel.ISupportInitialize)(this.picStartMenuico)).EndInit();
             ((System.ComponentModel.ISupportInitialize)(this.picBackground)).EndInit();
             this.ResumeLayout(false);
 
@@ -515,26 +518,26 @@
         private UControl.ucMenuItem ucBack;
         private UControl.ucMenuItem ucRedo;
         private UControl.ucMenuItem ucMini;
-        private UControl.ucMenuItem ucMenuItem1;
+        private UControl.ucMenuItem ucInteract;
         private System.Windows.Forms.ContextMenuStrip cmsStartMenu;
         private System.Windows.Forms.ToolStripMenuItem tsmiSave;
         private System.Windows.Forms.ToolStripMenuItem tsmiOutput;
         private System.Windows.Forms.ToolStripMenuItem tsmiSetting;
         private System.Windows.Forms.ToolStripMenuItem tsmiHelp;
         private System.Windows.Forms.ToolStripMenuItem tsmiLogout;
-        private System.Windows.Forms.ToolStripMenuItem 使用说明ToolStripMenuItem;
-        private System.Windows.Forms.ToolStripMenuItem 关于ToolStripMenuItem;
+        private System.Windows.Forms.ToolStripMenuItem tsmiMan;
+        private System.Windows.Forms.ToolStripMenuItem tsmiAbout;
         private System.Windows.Forms.ToolStripMenuItem tsmiOpen;
-        private System.Windows.Forms.Panel panel1;
+        private System.Windows.Forms.Panel pnlInterPanel;
         private System.Windows.Forms.Panel pnlIntertitle;
-        private System.Windows.Forms.PictureBox pictureBox1;
+        private System.Windows.Forms.PictureBox picTitleIco;
         private System.Windows.Forms.Label lblTitle;
         private System.Windows.Forms.Panel pnlInformation;
         private System.Windows.Forms.Panel panel2;
 
         private UControl.ucInterButton btnTest;
         private UControl.ucInterButton btnChoice;
-        private System.Windows.Forms.Panel panel3;
+        private System.Windows.Forms.Panel pnlLine1;
         private System.Windows.Forms.Panel pnlStudentlist;
         private UControl.ucInterButton btnWrite;
     }

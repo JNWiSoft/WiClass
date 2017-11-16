@@ -18,20 +18,20 @@ using System.Windows.Forms;
 //==============================================================
 namespace WiClass.Class
 {
-    public partial class MyMenu : MenuStrip  
-    {  
-        public  MyMenu()
-        {  
+    public partial class MyMenu : MenuStrip
+    {
+        public MyMenu()
+        {
             InitializeComponent();
             this.Renderer = new clsMyMenuRender();//设置渲染  
         }
 
-    public MyMenu(IContainer container)
-    {
-        container.Add(this);
+        public MyMenu(IContainer container)
+        {
+            container.Add(this);
 
-        InitializeComponent();
-        this.Renderer = new clsMyMenuRender();//设置渲染</span>  
+            InitializeComponent();
+            this.Renderer = new clsMyMenuRender();//设置渲染</span>  
         }
-}  
+    }
 }

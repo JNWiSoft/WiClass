@@ -74,6 +74,12 @@
     <Compile Include="UControl\ucInterButton.Designer.cs">
       <DependentUpon>ucInterButton.cs</DependentUpon>
     </Compile>
+    <Compile Include="UControl\ucItemContent.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\ucItemContent.Designer.cs">
+      <DependentUpon>ucItemContent.cs</DependentUpon>
+    </Compile>
     <Compile Include="UControl\ucMenuItem.cs">
       <SubType>UserControl</SubType>
     </Compile>
@@ -85,6 +91,12 @@
     </Compile>
     <Compile Include="UControl\ucStartMenuItem.Designer.cs">
       <DependentUpon>ucStartMenuItem.cs</DependentUpon>
+    </Compile>
+    <Compile Include="UControl\ucStudentList.cs">
+      <SubType>UserControl</SubType>
+    </Compile>
+    <Compile Include="UControl\ucStudentList.Designer.cs">
+      <DependentUpon>ucStudentList.cs</DependentUpon>
     </Compile>
     <EmbeddedResource Include="Login.resx">
       <DependentUpon>Login.cs</DependentUpon>
@@ -105,11 +117,17 @@
     <EmbeddedResource Include="UControl\ucInterButton.resx">
       <DependentUpon>ucInterButton.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UControl\ucItemContent.resx">
+      <DependentUpon>ucItemContent.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UControl\ucMenuItem.resx">
       <DependentUpon>ucMenuItem.cs</DependentUpon>
     </EmbeddedResource>
     <EmbeddedResource Include="UControl\ucStartMenuItem.resx">
       <DependentUpon>ucStartMenuItem.cs</DependentUpon>
+    </EmbeddedResource>
+    <EmbeddedResource Include="UControl\ucStudentList.resx">
+      <DependentUpon>ucStudentList.cs</DependentUpon>
     </EmbeddedResource>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
@@ -192,6 +210,12 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\test11.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\offline.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\studentAll.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

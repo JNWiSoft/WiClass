@@ -8,6 +8,7 @@ using System.Text;
 using System.Threading.Tasks;
 using System.Windows.Forms;
 using WiClass.Class;
+using WiClass.UControl;
 //==============================================================
 //  作者：Tony
 //  时间：2017年11月05日
@@ -22,7 +23,8 @@ namespace WiClass
 {
     public partial class Main : Form
     {
-        private int ibtselect = 0;
+        private int ibtselect = 0;//互动操作按钮选中状态0：全部未选中，1：书写，2：选择，3测试
+        
         public Main()
         {
             InitializeComponent();
@@ -192,8 +194,36 @@ namespace WiClass
 
             }
         }
+
         #endregion
 
+        #region 互动窗口弹出  2017-11-16 Tony
+        private void ucInteract_Click(object sender, EventArgs e)
+        {
+            if(pnlInterPanel.Visible)
+            {
+                pnlInterPanel.Visible = false;
+            }
+            else
+            {
+                pnlInterPanel.Visible = true;
+            }
+        }
+        #endregion
 
+        private void Main_Load(object sender, EventArgs e)
+        {
+            //加载默认题目内容控件
+            ucItemContent ucic = new ucItemContent();
+            pnlInformation.Controls.Add(ucic);
+            ucic.Dock = DockStyle.Fill;
+            //加载默认学生列表控件
+            ucStudentList ucsl = new ucStudentList();
+            pnlStudentlist.Controls.Add(ucsl);
+            ucsl.Dock = DockStyle.Fill;
+
+
+
+        }
     }
 }
