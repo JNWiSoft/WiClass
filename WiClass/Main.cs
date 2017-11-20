@@ -225,5 +225,16 @@ namespace WiClass
 
 
         }
+
+        private void ucMini_Click(object sender, EventArgs e)
+        {
+            this.Hide();
+            frmMini fr = new frmMini();
+            fr.Show();
+            fr.WindowState = FormWindowState.Normal;
+            fr.ShowInTaskbar = false;
+            fr.TopLevel = true;
+            fr.TopMost = true;
+        }
     }
 }
