@@ -28,10 +28,33 @@
         /// </summary>
         private void InitializeComponent()
         {
-            components = new System.ComponentModel.Container();
+            this.picIco = new System.Windows.Forms.PictureBox();
+            ((System.ComponentModel.ISupportInitialize)(this.picIco)).BeginInit();
+            this.SuspendLayout();
+            // 
+            // picIco
+            // 
+            this.picIco.Location = new System.Drawing.Point(9, 10);
+            this.picIco.Name = "picIco";
+            this.picIco.Size = new System.Drawing.Size(40, 40);
+            this.picIco.SizeMode = System.Windows.Forms.PictureBoxSizeMode.StretchImage;
+            this.picIco.TabIndex = 0;
+            this.picIco.TabStop = false;
+            // 
+            // ucMiniButton
+            // 
+            this.AutoScaleDimensions = new System.Drawing.SizeF(8F, 15F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
+            this.Controls.Add(this.picIco);
+            this.Name = "ucMiniButton";
+            this.Size = new System.Drawing.Size(60, 60);
+            ((System.ComponentModel.ISupportInitialize)(this.picIco)).EndInit();
+            this.ResumeLayout(false);
+
         }
 
         #endregion
+
+        private System.Windows.Forms.PictureBox picIco;
     }
 }

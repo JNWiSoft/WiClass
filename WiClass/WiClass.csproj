@@ -138,6 +138,9 @@
     <EmbeddedResource Include="UControl\ucMenuItem.resx">
       <DependentUpon>ucMenuItem.cs</DependentUpon>
     </EmbeddedResource>
+    <EmbeddedResource Include="UControl\ucMiniButton.resx">
+      <DependentUpon>ucMiniButton.cs</DependentUpon>
+    </EmbeddedResource>
     <EmbeddedResource Include="UControl\ucStartMenuItem.resx">
       <DependentUpon>ucStartMenuItem.cs</DependentUpon>
     </EmbeddedResource>
@@ -231,6 +234,21 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="Resources\studentAll.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btbg.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\btbg1.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\clear.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="Resources\max.png" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="background\bg1.png" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 

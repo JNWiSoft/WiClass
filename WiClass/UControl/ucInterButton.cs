@@ -147,25 +147,13 @@ namespace WiClass.UControl
         #endregion
 
         #region 纯色填充
-        private void Draw(Rectangle rectangle, Graphics g, int _radius, bool cusp,Color bcolor)
+        private void Draw(Rectangle rectangle, Graphics g, int _radius,Color bcolor)
         {
             int span = 2;
             //抗锯齿
             g.SmoothingMode = SmoothingMode.AntiAlias;
-           
             SolidBrush mybrush = new SolidBrush(bcolor);
-            //画尖角
-            if (cusp)
-            {
-                span = 10;
-                PointF p1 = new PointF(rectangle.Width - 12, rectangle.Y + 10);
-                PointF p2 = new PointF(rectangle.Width - 12, rectangle.Y + 30);
-                PointF p3 = new PointF(rectangle.Width, rectangle.Y + 20);
-                PointF[] ptsArray = { p1, p2, p3 };
-                g.FillPolygon(mybrush, ptsArray);
-            }
             //填充
-
             g.FillPath(mybrush, DrawRoundRect(rectangle.X, rectangle.Y, rectangle.Width - span, rectangle.Height - 1, _radius));
         }
         #endregion
@@ -178,6 +166,7 @@ namespace WiClass.UControl
             //抗锯齿
             g.SmoothingMode = SmoothingMode.AntiAlias;
             //渐变填充
+            
             LinearGradientBrush myLinearGradientBrush = new LinearGradientBrush(rectangle, begin_color, end_color, LinearGradientMode.Vertical);
            
             //画尖角
@@ -196,7 +185,7 @@ namespace WiClass.UControl
         }
         #endregion
 
-        #region 重新绘制
+        #region 绘制圆角
         public static GraphicsPath DrawRoundRect(int x, int y, int width, int height, int radius)
         {
             //四边圆角
@@ -214,7 +203,7 @@ namespace WiClass.UControl
         private void pnlItemBg_Paint(object sender, PaintEventArgs e)
         {
             
-            Draw(e.ClipRectangle, e.Graphics, 10, false, stacolor);
+            Draw(e.ClipRectangle, e.Graphics, 10,  stacolor);
             picIco.BackColor = stacolor;
             base.OnPaint(e);
         }
