@@ -24,7 +24,25 @@ namespace WiClass
     public partial class Main : Form
     {
         private int ibtselect = 0;//互动操作按钮选中状态0：全部未选中，1：书写，2：选择，3测试
-        
+
+        #region 屏幕绘制对应的参数定义  2017-11-30 高峰
+        Point startPoint;           //鼠标左键点下时在设备坐标上的坐标
+        Point lastPoint;            //画线时记录上一个点 
+        //一条线条，记录鼠标按下，移动到抬起的点
+        private struct Line
+        {
+            public PointF beginPoint { get; set; }
+            public List<PointF> pointList;
+        }
+        Line current_line;                           //当前正在绘制的线条
+        Graphics g;
+        Pen p;
+        Bitmap m_bmp;               //picturebox中的图像
+        PointF m_bmp_pt;             //m_bmp在picturebox中的起点坐标
+        private List<Line> lines = new List<Line>(); //记录当前页面所有的线条
+        #endregion
+
+
         public Main()
         {
             InitializeComponent();
@@ -40,6 +58,8 @@ namespace WiClass
         {
             picBackground.Image = Image.FromFile("Background/bg1.png");
             cmsStartMenu.Renderer = new clsMyMenuRender();
+            m_bmp = new Bitmap(picBackground.Image);
+            m_bmp_pt = new PointF(0, 0);
         }
         #endregion
 
@@ -236,5 +256,88 @@ namespace WiClass
             fr.TopLevel = true;
             fr.TopMost = true;
         }
+
+        #region 点击画笔可以在整个桌面上进行绘制 2017-11-30 Gaofeng
+        private void ucPen_Click(object sender, EventArgs e)
+        {
+
+        }
+        #endregion
+
+        #region picBackground对应的鼠标点击事件 2017-11-30 高峰
+        private void picBackground_MouseDown(object sender, MouseEventArgs e)
+        {
+            //鼠标左键事件，对应的是画笔绘制功能
+            if(e.Button == MouseButtons.Left)
+            {
+                startPoint = e.Location;
+                lastPoint = startPoint;
+
+                //落笔时新建Line对象，并记录起点
+                Line line = new Line();
+                line.pointList = new List<PointF>();
+                line.beginPoint = e.Location;
+                current_line = line;
+            }
+        }
+        #endregion
+
+        #region picBackground对应的鼠标移动事件 2017-11-30 高峰
+        private void picBackground_MouseMove(object sender, MouseEventArgs e)
+        {
+            //鼠标左键按下，在图片上绘画
+            if (e.Button == MouseButtons.Left)
+            {
+                g = Graphics.FromImage(m_bmp);
+                p = new Pen(Color.Cyan, 3);
+                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                g.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+
+                //移动时，实时向当前的线条内加入当前的点
+                current_line.pointList.Add(e.Location);
+
+                if (e.Location != lastPoint)
+                {
+                    g.DrawLine(p, lastPoint, e.Location);
+
+                }
+                p.Dispose();
+                g.Dispose();
+
+                lastPoint = e.Location;
+                picBackground.Invalidate();
+            }
+        }
+        #endregion
+
+        #region picBackground对应的鼠标抬起事件 2017-11-30 高峰
+        private void picBackground_MouseUp(object sender, MouseEventArgs e)
+        {
+            if (e.Button == MouseButtons.Left)
+            {
+                if (current_line.pointList == null)
+                {
+                    return;
+                }
+
+                //结束绘制时，将当前线条加入所有的线条中
+                lines.Add(current_line);
+            }
+        }
+        #endregion
+
+        #region picBackground对应的绘制时事件 2017-11-30 高峰
+        private void picBackground_Paint(object sender, PaintEventArgs e)
+        {
+            Graphics g = e.Graphics;
+            e.Graphics.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+            e.Graphics.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+            e.Graphics.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
+
+            //在指定位置并且按指定大小绘制指定的Image的指定部分。
+            g.DrawImage(m_bmp, m_bmp_pt);
+        }
+        #endregion
     }
 }

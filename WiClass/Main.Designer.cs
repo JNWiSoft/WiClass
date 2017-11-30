@@ -87,9 +87,9 @@
             this.pnlToolsbar.Controls.Add(this.ucEraser);
             this.pnlToolsbar.Controls.Add(this.ucPen);
             this.pnlToolsbar.Controls.Add(this.picStartMenuico);
-            this.pnlToolsbar.Location = new System.Drawing.Point(0, 556);
+            this.pnlToolsbar.Location = new System.Drawing.Point(0, 602);
             this.pnlToolsbar.Name = "pnlToolsbar";
-            this.pnlToolsbar.Size = new System.Drawing.Size(1336, 66);
+            this.pnlToolsbar.Size = new System.Drawing.Size(1559, 72);
             this.pnlToolsbar.TabIndex = 0;
             // 
             // ucInteract
@@ -103,10 +103,10 @@
             this.ucInteract.Imagesurl = global::WiClass.Properties.Resources.interaction;
             this.ucInteract.ItemText = "互动";
             this.ucInteract.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(6)))), ((int)(((byte)(128)))), ((int)(((byte)(253)))));
-            this.ucInteract.Location = new System.Drawing.Point(1269, 0);
+            this.ucInteract.Location = new System.Drawing.Point(1480, 0);
             this.ucInteract.Margin = new System.Windows.Forms.Padding(0);
             this.ucInteract.Name = "ucInteract";
-            this.ucInteract.Size = new System.Drawing.Size(66, 66);
+            this.ucInteract.Size = new System.Drawing.Size(77, 72);
             this.ucInteract.TabIndex = 8;
             this.ucInteract.Click += new System.EventHandler(this.ucInteract_Click);
             // 
@@ -120,9 +120,9 @@
             this.ucMini.Imagesurl = global::WiClass.Properties.Resources.mini;
             this.ucMini.ItemText = "桌面";
             this.ucMini.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.ucMini.Location = new System.Drawing.Point(895, 0);
+            this.ucMini.Location = new System.Drawing.Point(1044, 0);
             this.ucMini.Name = "ucMini";
-            this.ucMini.Size = new System.Drawing.Size(66, 66);
+            this.ucMini.Size = new System.Drawing.Size(77, 72);
             this.ucMini.TabIndex = 7;
             this.ucMini.Click += new System.EventHandler(this.ucMini_Click);
             // 
@@ -136,9 +136,9 @@
             this.ucRedo.Imagesurl = global::WiClass.Properties.Resources.redo;
             this.ucRedo.ItemText = "恢复";
             this.ucRedo.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.ucRedo.Location = new System.Drawing.Point(827, 0);
+            this.ucRedo.Location = new System.Drawing.Point(965, 0);
             this.ucRedo.Name = "ucRedo";
-            this.ucRedo.Size = new System.Drawing.Size(66, 66);
+            this.ucRedo.Size = new System.Drawing.Size(77, 72);
             this.ucRedo.TabIndex = 6;
             // 
             // ucBack
@@ -151,9 +151,9 @@
             this.ucBack.Imagesurl = global::WiClass.Properties.Resources.back;
             this.ucBack.ItemText = "撤销";
             this.ucBack.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.ucBack.Location = new System.Drawing.Point(759, 0);
+            this.ucBack.Location = new System.Drawing.Point(885, 0);
             this.ucBack.Name = "ucBack";
-            this.ucBack.Size = new System.Drawing.Size(66, 66);
+            this.ucBack.Size = new System.Drawing.Size(77, 72);
             this.ucBack.TabIndex = 5;
             // 
             // ucBackground
@@ -166,9 +166,9 @@
             this.ucBackground.Imagesurl = global::WiClass.Properties.Resources.background;
             this.ucBackground.ItemText = "背景";
             this.ucBackground.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.ucBackground.Location = new System.Drawing.Point(691, 0);
+            this.ucBackground.Location = new System.Drawing.Point(806, 0);
             this.ucBackground.Name = "ucBackground";
-            this.ucBackground.Size = new System.Drawing.Size(66, 66);
+            this.ucBackground.Size = new System.Drawing.Size(77, 72);
             this.ucBackground.TabIndex = 4;
             // 
             // ucTools
@@ -181,9 +181,9 @@
             this.ucTools.Imagesurl = global::WiClass.Properties.Resources.tools;
             this.ucTools.ItemText = "工具";
             this.ucTools.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.ucTools.Location = new System.Drawing.Point(623, 0);
+            this.ucTools.Location = new System.Drawing.Point(727, 0);
             this.ucTools.Name = "ucTools";
-            this.ucTools.Size = new System.Drawing.Size(66, 66);
+            this.ucTools.Size = new System.Drawing.Size(77, 72);
             this.ucTools.TabIndex = 3;
             // 
             // ucSelect
@@ -197,9 +197,9 @@
             this.ucSelect.Imagesurl = global::WiClass.Properties.Resources.select;
             this.ucSelect.ItemText = "选择";
             this.ucSelect.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.ucSelect.Location = new System.Drawing.Point(419, 0);
+            this.ucSelect.Location = new System.Drawing.Point(489, 0);
             this.ucSelect.Name = "ucSelect";
-            this.ucSelect.Size = new System.Drawing.Size(66, 66);
+            this.ucSelect.Size = new System.Drawing.Size(77, 72);
             this.ucSelect.TabIndex = 1;
             // 
             // ucEraser
@@ -212,9 +212,9 @@
             this.ucEraser.Imagesurl = global::WiClass.Properties.Resources.eraser;
             this.ucEraser.ItemText = "橡皮";
             this.ucEraser.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.ucEraser.Location = new System.Drawing.Point(555, 0);
+            this.ucEraser.Location = new System.Drawing.Point(647, 0);
             this.ucEraser.Name = "ucEraser";
-            this.ucEraser.Size = new System.Drawing.Size(66, 66);
+            this.ucEraser.Size = new System.Drawing.Size(77, 72);
             this.ucEraser.TabIndex = 2;
             // 
             // ucPen
@@ -227,10 +227,11 @@
             this.ucPen.Imagesurl = global::WiClass.Properties.Resources.pen;
             this.ucPen.ItemText = "画笔";
             this.ucPen.Leavecolor = System.Drawing.Color.FromArgb(((int)(((byte)(67)))), ((int)(((byte)(67)))), ((int)(((byte)(67)))));
-            this.ucPen.Location = new System.Drawing.Point(487, 0);
+            this.ucPen.Location = new System.Drawing.Point(568, 0);
             this.ucPen.Name = "ucPen";
-            this.ucPen.Size = new System.Drawing.Size(66, 66);
+            this.ucPen.Size = new System.Drawing.Size(77, 72);
             this.ucPen.TabIndex = 1;
+            this.ucPen.Click += new System.EventHandler(this.ucPen_Click);
             // 
             // picStartMenuico
             // 
@@ -239,8 +240,8 @@
             this.picStartMenuico.BackgroundImageLayout = System.Windows.Forms.ImageLayout.None;
             this.picStartMenuico.Location = new System.Drawing.Point(0, 0);
             this.picStartMenuico.Name = "picStartMenuico";
-            this.picStartMenuico.Padding = new System.Windows.Forms.Padding(5);
-            this.picStartMenuico.Size = new System.Drawing.Size(66, 66);
+            this.picStartMenuico.Padding = new System.Windows.Forms.Padding(6, 5, 6, 5);
+            this.picStartMenuico.Size = new System.Drawing.Size(77, 72);
             this.picStartMenuico.SizeMode = System.Windows.Forms.PictureBoxSizeMode.CenterImage;
             this.picStartMenuico.TabIndex = 0;
             this.picStartMenuico.TabStop = false;
@@ -252,6 +253,7 @@
             // cmsStartMenu
             // 
             this.cmsStartMenu.DropShadowEnabled = false;
+            this.cmsStartMenu.ImageScalingSize = new System.Drawing.Size(18, 18);
             this.cmsStartMenu.Items.AddRange(new System.Windows.Forms.ToolStripItem[] {
             this.tsmiOpen,
             this.tsmiSave,
@@ -260,7 +262,7 @@
             this.tsmiHelp,
             this.tsmiLogout});
             this.cmsStartMenu.Name = "contextMenuStrip1";
-            this.cmsStartMenu.Size = new System.Drawing.Size(148, 220);
+            this.cmsStartMenu.Size = new System.Drawing.Size(153, 220);
             // 
             // tsmiOpen
             // 
@@ -268,7 +270,7 @@
             this.tsmiOpen.Image = global::WiClass.Properties.Resources.open;
             this.tsmiOpen.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmiOpen.Name = "tsmiOpen";
-            this.tsmiOpen.Size = new System.Drawing.Size(147, 36);
+            this.tsmiOpen.Size = new System.Drawing.Size(152, 36);
             this.tsmiOpen.Text = "打开板书";
             // 
             // tsmiSave
@@ -277,7 +279,7 @@
             this.tsmiSave.Image = global::WiClass.Properties.Resources.save;
             this.tsmiSave.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmiSave.Name = "tsmiSave";
-            this.tsmiSave.Size = new System.Drawing.Size(147, 36);
+            this.tsmiSave.Size = new System.Drawing.Size(152, 36);
             this.tsmiSave.Text = "保存板书";
             // 
             // tsmiOutput
@@ -286,7 +288,7 @@
             this.tsmiOutput.Image = global::WiClass.Properties.Resources.output;
             this.tsmiOutput.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmiOutput.Name = "tsmiOutput";
-            this.tsmiOutput.Size = new System.Drawing.Size(147, 36);
+            this.tsmiOutput.Size = new System.Drawing.Size(152, 36);
             this.tsmiOutput.Text = "导出课堂";
             // 
             // tsmiSetting
@@ -295,7 +297,7 @@
             this.tsmiSetting.Image = global::WiClass.Properties.Resources.setting;
             this.tsmiSetting.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmiSetting.Name = "tsmiSetting";
-            this.tsmiSetting.Size = new System.Drawing.Size(147, 36);
+            this.tsmiSetting.Size = new System.Drawing.Size(152, 36);
             this.tsmiSetting.Text = "系统设置";
             // 
             // tsmiHelp
@@ -307,19 +309,19 @@
             this.tsmiHelp.Image = ((System.Drawing.Image)(resources.GetObject("tsmiHelp.Image")));
             this.tsmiHelp.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmiHelp.Name = "tsmiHelp";
-            this.tsmiHelp.Size = new System.Drawing.Size(147, 36);
+            this.tsmiHelp.Size = new System.Drawing.Size(152, 36);
             this.tsmiHelp.Text = "帮助";
             // 
             // tsmiMan
             // 
             this.tsmiMan.Name = "tsmiMan";
-            this.tsmiMan.Size = new System.Drawing.Size(134, 24);
+            this.tsmiMan.Size = new System.Drawing.Size(140, 24);
             this.tsmiMan.Text = "使用说明";
             // 
             // tsmiAbout
             // 
             this.tsmiAbout.Name = "tsmiAbout";
-            this.tsmiAbout.Size = new System.Drawing.Size(134, 24);
+            this.tsmiAbout.Size = new System.Drawing.Size(140, 24);
             this.tsmiAbout.Text = "关于";
             // 
             // tsmiLogout
@@ -328,7 +330,7 @@
             this.tsmiLogout.Image = global::WiClass.Properties.Resources.logout;
             this.tsmiLogout.ImageScaling = System.Windows.Forms.ToolStripItemImageScaling.None;
             this.tsmiLogout.Name = "tsmiLogout";
-            this.tsmiLogout.Size = new System.Drawing.Size(147, 36);
+            this.tsmiLogout.Size = new System.Drawing.Size(152, 36);
             this.tsmiLogout.Text = "退出";
             this.tsmiLogout.Click += new System.EventHandler(this.tsmiLogout_Click);
             // 
@@ -342,9 +344,9 @@
             this.pnlInterPanel.Controls.Add(this.panel2);
             this.pnlInterPanel.Controls.Add(this.pnlInformation);
             this.pnlInterPanel.Controls.Add(this.pnlIntertitle);
-            this.pnlInterPanel.Location = new System.Drawing.Point(961, 0);
+            this.pnlInterPanel.Location = new System.Drawing.Point(1121, 0);
             this.pnlInterPanel.Name = "pnlInterPanel";
-            this.pnlInterPanel.Size = new System.Drawing.Size(375, 556);
+            this.pnlInterPanel.Size = new System.Drawing.Size(437, 602);
             this.pnlInterPanel.TabIndex = 2;
             this.pnlInterPanel.Visible = false;
             // 
@@ -354,9 +356,9 @@
             | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlStudentlist.BackColor = System.Drawing.Color.DimGray;
-            this.pnlStudentlist.Location = new System.Drawing.Point(0, 290);
+            this.pnlStudentlist.Location = new System.Drawing.Point(0, 314);
             this.pnlStudentlist.Name = "pnlStudentlist";
-            this.pnlStudentlist.Size = new System.Drawing.Size(375, 187);
+            this.pnlStudentlist.Size = new System.Drawing.Size(437, 203);
             this.pnlStudentlist.TabIndex = 4;
             // 
             // pnlLine1
@@ -364,9 +366,9 @@
             this.pnlLine1.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Bottom | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlLine1.BackColor = System.Drawing.Color.LightGray;
-            this.pnlLine1.Location = new System.Drawing.Point(0, 477);
+            this.pnlLine1.Location = new System.Drawing.Point(0, 517);
             this.pnlLine1.Name = "pnlLine1";
-            this.pnlLine1.Size = new System.Drawing.Size(375, 1);
+            this.pnlLine1.Size = new System.Drawing.Size(437, 1);
             this.pnlLine1.TabIndex = 3;
             // 
             // panel2
@@ -377,9 +379,9 @@
             this.panel2.Controls.Add(this.btnTest);
             this.panel2.Controls.Add(this.btnChoice);
             this.panel2.Controls.Add(this.btnWrite);
-            this.panel2.Location = new System.Drawing.Point(0, 477);
+            this.panel2.Location = new System.Drawing.Point(0, 517);
             this.panel2.Name = "panel2";
-            this.panel2.Size = new System.Drawing.Size(375, 80);
+            this.panel2.Size = new System.Drawing.Size(437, 87);
             this.panel2.TabIndex = 2;
             // 
             // btnTest
@@ -390,9 +392,9 @@
             this.btnTest.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
             this.btnTest.Imagesurl = global::WiClass.Properties.Resources.test11;
             this.btnTest.Itemtext = "测试";
-            this.btnTest.Location = new System.Drawing.Point(261, 10);
+            this.btnTest.Location = new System.Drawing.Point(304, 11);
             this.btnTest.Name = "btnTest";
-            this.btnTest.Size = new System.Drawing.Size(66, 66);
+            this.btnTest.Size = new System.Drawing.Size(77, 72);
             this.btnTest.TabIndex = 2;
             this.btnTest.Click += new System.EventHandler(this.btnTest_Click);
             // 
@@ -404,9 +406,9 @@
             this.btnChoice.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
             this.btnChoice.Imagesurl = global::WiClass.Properties.Resources.choice6;
             this.btnChoice.Itemtext = "选择";
-            this.btnChoice.Location = new System.Drawing.Point(155, 10);
+            this.btnChoice.Location = new System.Drawing.Point(181, 11);
             this.btnChoice.Name = "btnChoice";
-            this.btnChoice.Size = new System.Drawing.Size(66, 66);
+            this.btnChoice.Size = new System.Drawing.Size(77, 72);
             this.btnChoice.TabIndex = 1;
             this.btnChoice.Click += new System.EventHandler(this.btnChoice_Click);
             // 
@@ -418,9 +420,9 @@
             this.btnWrite.Hovercolor = System.Drawing.Color.FromArgb(((int)(((byte)(0)))), ((int)(((byte)(204)))), ((int)(((byte)(0)))));
             this.btnWrite.Imagesurl = global::WiClass.Properties.Resources.write;
             this.btnWrite.Itemtext = "书写";
-            this.btnWrite.Location = new System.Drawing.Point(49, 10);
+            this.btnWrite.Location = new System.Drawing.Point(57, 11);
             this.btnWrite.Name = "btnWrite";
-            this.btnWrite.Size = new System.Drawing.Size(66, 66);
+            this.btnWrite.Size = new System.Drawing.Size(77, 72);
             this.btnWrite.TabIndex = 0;
             this.btnWrite.Click += new System.EventHandler(this.btnWrite_Click);
             // 
@@ -429,9 +431,9 @@
             this.pnlInformation.Anchor = ((System.Windows.Forms.AnchorStyles)(((System.Windows.Forms.AnchorStyles.Top | System.Windows.Forms.AnchorStyles.Left) 
             | System.Windows.Forms.AnchorStyles.Right)));
             this.pnlInformation.BackColor = System.Drawing.Color.White;
-            this.pnlInformation.Location = new System.Drawing.Point(0, 40);
+            this.pnlInformation.Location = new System.Drawing.Point(0, 43);
             this.pnlInformation.Name = "pnlInformation";
-            this.pnlInformation.Size = new System.Drawing.Size(375, 250);
+            this.pnlInformation.Size = new System.Drawing.Size(437, 271);
             this.pnlInformation.TabIndex = 1;
             // 
             // pnlIntertitle
@@ -444,7 +446,7 @@
             this.pnlIntertitle.Location = new System.Drawing.Point(0, 0);
             this.pnlIntertitle.Margin = new System.Windows.Forms.Padding(0);
             this.pnlIntertitle.Name = "pnlIntertitle";
-            this.pnlIntertitle.Size = new System.Drawing.Size(375, 40);
+            this.pnlIntertitle.Size = new System.Drawing.Size(437, 43);
             this.pnlIntertitle.TabIndex = 0;
             // 
             // lblTitle
@@ -452,18 +454,18 @@
             this.lblTitle.AutoSize = true;
             this.lblTitle.Font = new System.Drawing.Font("微软雅黑", 10F, System.Drawing.FontStyle.Bold, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
             this.lblTitle.ForeColor = System.Drawing.Color.White;
-            this.lblTitle.Location = new System.Drawing.Point(28, 10);
+            this.lblTitle.Location = new System.Drawing.Point(33, 11);
             this.lblTitle.Name = "lblTitle";
-            this.lblTitle.Size = new System.Drawing.Size(65, 19);
+            this.lblTitle.Size = new System.Drawing.Size(69, 19);
             this.lblTitle.TabIndex = 1;
             this.lblTitle.Text = "课堂互动";
             // 
             // picTitleIco
             // 
             this.picTitleIco.Image = ((System.Drawing.Image)(resources.GetObject("picTitleIco.Image")));
-            this.picTitleIco.Location = new System.Drawing.Point(5, 10);
+            this.picTitleIco.Location = new System.Drawing.Point(6, 11);
             this.picTitleIco.Name = "picTitleIco";
-            this.picTitleIco.Size = new System.Drawing.Size(20, 20);
+            this.picTitleIco.Size = new System.Drawing.Size(23, 22);
             this.picTitleIco.TabIndex = 0;
             this.picTitleIco.TabStop = false;
             // 
@@ -475,15 +477,19 @@
             this.picBackground.Location = new System.Drawing.Point(0, 0);
             this.picBackground.Margin = new System.Windows.Forms.Padding(0);
             this.picBackground.Name = "picBackground";
-            this.picBackground.Size = new System.Drawing.Size(1336, 557);
+            this.picBackground.Size = new System.Drawing.Size(1559, 603);
             this.picBackground.TabIndex = 1;
             this.picBackground.TabStop = false;
+            this.picBackground.Paint += new System.Windows.Forms.PaintEventHandler(this.picBackground_Paint);
+            this.picBackground.MouseDown += new System.Windows.Forms.MouseEventHandler(this.picBackground_MouseDown);
+            this.picBackground.MouseMove += new System.Windows.Forms.MouseEventHandler(this.picBackground_MouseMove);
+            this.picBackground.MouseUp += new System.Windows.Forms.MouseEventHandler(this.picBackground_MouseUp);
             // 
             // Main
             // 
-            this.AutoScaleDimensions = new System.Drawing.SizeF(6F, 12F);
+            this.AutoScaleDimensions = new System.Drawing.SizeF(7F, 13F);
             this.AutoScaleMode = System.Windows.Forms.AutoScaleMode.Font;
-            this.ClientSize = new System.Drawing.Size(1336, 622);
+            this.ClientSize = new System.Drawing.Size(1559, 674);
             this.Controls.Add(this.pnlInterPanel);
             this.Controls.Add(this.pnlToolsbar);
             this.Controls.Add(this.picBackground);
