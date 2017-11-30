@@ -23,7 +23,14 @@ namespace WiClass
 {
     public partial class Main : Form
     {
-        private int ibtselect = 0;//互动操作按钮选中状态0：全部未选中，1：书写，2：选择，3测试
+        private int ibtselect = 0; //互动操作按钮选中状态0：全部未选中，1：书写，2：选择，3测试
+
+        #region 下方工具栏按钮对应的选中状态定义 2017-11-30 高峰
+        public const int IS_PEN = 1;
+        public const int IS_ERASER = 2;
+        private int toolBarState = 0;
+
+        #endregion
 
         #region 屏幕绘制对应的参数定义  2017-11-30 高峰
         Point startPoint;           //鼠标左键点下时在设备坐标上的坐标
@@ -40,6 +47,11 @@ namespace WiClass
         Bitmap m_bmp;               //picturebox中的图像
         PointF m_bmp_pt;             //m_bmp在picturebox中的起点坐标
         private List<Line> lines = new List<Line>(); //记录当前页面所有的线条
+        #endregion
+
+        #region 橡皮擦除功能对应的参数定义 2017-11-30 高峰
+        Bitmap cm_bmp; //m_bmp的复制，用于实现橡皮擦除功能
+        Graphics rg;
         #endregion
 
 
@@ -59,10 +71,10 @@ namespace WiClass
             picBackground.Image = Image.FromFile("Background/bg1.png");
             cmsStartMenu.Renderer = new clsMyMenuRender();
             m_bmp = new Bitmap(picBackground.Image);
+            cm_bmp = new Bitmap(picBackground.Image);
             m_bmp_pt = new PointF(0, 0);
         }
         #endregion
-
 
         #region 开始菜单图标交互效果
         private void picStartMenuico_MouseHover(object sender, EventArgs e)
@@ -257,27 +269,36 @@ namespace WiClass
             fr.TopMost = true;
         }
 
-        #region 点击画笔可以在整个桌面上进行绘制 2017-11-30 Gaofeng
+        #region 点击画笔可以在整个桌面上进行绘制 2017-11-30 高峰
         private void ucPen_Click(object sender, EventArgs e)
         {
+            toolBarState = IS_PEN;
+        }
+        #endregion
 
+        #region 点击橡皮可以对绘制的内容进行擦除 2017-11-30 高峰
+        private void ucEraser_MouseClick(object sender, MouseEventArgs e)
+        {
+            toolBarState = IS_ERASER;
         }
         #endregion
 
         #region picBackground对应的鼠标点击事件 2017-11-30 高峰
         private void picBackground_MouseDown(object sender, MouseEventArgs e)
         {
-            //鼠标左键事件，对应的是画笔绘制功能
             if(e.Button == MouseButtons.Left)
             {
-                startPoint = e.Location;
-                lastPoint = startPoint;
+                if (toolBarState == IS_PEN) // 画笔绘制功能
+                {
+                    startPoint = e.Location;
+                    lastPoint = startPoint;
 
-                //落笔时新建Line对象，并记录起点
-                Line line = new Line();
-                line.pointList = new List<PointF>();
-                line.beginPoint = e.Location;
-                current_line = line;
+                    //落笔时新建Line对象，并记录起点
+                    Line line = new Line();
+                    line.pointList = new List<PointF>();
+                    line.beginPoint = e.Location;
+                    current_line = line;
+                } 
             }
         }
         #endregion
@@ -285,28 +306,37 @@ namespace WiClass
         #region picBackground对应的鼠标移动事件 2017-11-30 高峰
         private void picBackground_MouseMove(object sender, MouseEventArgs e)
         {
-            //鼠标左键按下，在图片上绘画
             if (e.Button == MouseButtons.Left)
             {
-                g = Graphics.FromImage(m_bmp);
-                p = new Pen(Color.Cyan, 3);
-                g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
-                g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
-                g.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
-
-                //移动时，实时向当前的线条内加入当前的点
-                current_line.pointList.Add(e.Location);
-
-                if (e.Location != lastPoint)
+                if(toolBarState == IS_PEN) // 画笔绘制功能
                 {
-                    g.DrawLine(p, lastPoint, e.Location);
+                    g = Graphics.FromImage(m_bmp);
+                    p = new Pen(Color.Cyan, 3);
+                    g.SmoothingMode = System.Drawing.Drawing2D.SmoothingMode.AntiAlias;
+                    g.InterpolationMode = System.Drawing.Drawing2D.InterpolationMode.HighQualityBicubic;
+                    g.CompositingQuality = System.Drawing.Drawing2D.CompositingQuality.HighQuality;
 
+                    //移动时，实时向当前的线条内加入当前的点
+                    current_line.pointList.Add(e.Location);
+
+                    if (e.Location != lastPoint)
+                    {
+                        g.DrawLine(p, lastPoint, e.Location);
+
+                    }
+                    p.Dispose();
+                    g.Dispose();
+
+                    lastPoint = e.Location;
+                    picBackground.Invalidate();
+                }else if(toolBarState == IS_ERASER) // 橡皮擦除功能
+                {
+                    rg = Graphics.FromImage(m_bmp);
+                    rg.DrawImage(cm_bmp, new Rectangle(e.Location.X - 10, e.Location.Y - 10, 20, 20),
+                        new Rectangle(e.Location.X - 10, e.Location.Y - 10, 20, 20), GraphicsUnit.Pixel);
+                    rg.Dispose();
+                    picBackground.Invalidate();
                 }
-                p.Dispose();
-                g.Dispose();
-
-                lastPoint = e.Location;
-                picBackground.Invalidate();
             }
         }
         #endregion
@@ -316,13 +346,17 @@ namespace WiClass
         {
             if (e.Button == MouseButtons.Left)
             {
-                if (current_line.pointList == null)
+                if(toolBarState == IS_PEN) //画笔绘制功能
                 {
-                    return;
-                }
+                    if (current_line.pointList == null)
+                    {
+                        return;
+                    }
 
-                //结束绘制时，将当前线条加入所有的线条中
-                lines.Add(current_line);
+                    //结束绘制时，将当前线条加入所有的线条中
+                    lines.Add(current_line);
+                }
+                
             }
         }
         #endregion
@@ -339,5 +373,6 @@ namespace WiClass
             g.DrawImage(m_bmp, m_bmp_pt);
         }
         #endregion
+
     }
 }

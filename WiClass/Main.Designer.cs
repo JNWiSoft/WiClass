@@ -216,6 +216,7 @@
             this.ucEraser.Name = "ucEraser";
             this.ucEraser.Size = new System.Drawing.Size(77, 72);
             this.ucEraser.TabIndex = 2;
+            this.ucEraser.MouseClick += new System.Windows.Forms.MouseEventHandler(this.ucEraser_MouseClick);
             // 
             // ucPen
             // 
