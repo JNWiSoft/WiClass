@@ -18,7 +18,7 @@ namespace WiClass
    
     public partial class frmMini : Form
     {
-
+        public static Form f;
         [DllImport("user32.dll")]
         public static extern bool ReleaseCapture();
         [DllImport("user32.dll")]
@@ -36,9 +36,16 @@ namespace WiClass
         private void frmMini_Load(object sender, EventArgs e)
         {
             ucMiniButton1.DrawBg();
-            this.Left = Screen.AllScreens[0].WorkingArea.Width-500;
+            init();
+        }
+
+        private void init()
+        {
+            f = this;
+            this.Left = Screen.AllScreens[0].WorkingArea.Width - 500;
             this.Top = Screen.AllScreens[0].WorkingArea.Height - 200;
         }
+
 
         private void ucMiniButton1_BackgroundImageChanged(object sender, EventArgs e)
         {
@@ -62,19 +69,23 @@ namespace WiClass
             switch (Itm.Itemid)
             {
                 case 0:
-                    //TODO：logo图标事件
+                    //TODO：鼠标
                     break;
                 case 1:
-                    //TODO：画笔图标事件
+                    //TODO：logo图标事件
                     break;
                 case 2:
-                    //TODO：橡皮图标事件
+                    //TODO：画笔图标事件
                     break;
                 case 3:
-                    //TODO：清除图标事件
+                    //TODO：橡皮图标事件
                     break;
                 case 4:
-                    //TODO：最大化图标事件
+                    //TODO：清除图标事件
+                    break;
+                case 5:
+                    this.Hide();
+                    Main.f.Show();
                     break;
                 default:
                     break;

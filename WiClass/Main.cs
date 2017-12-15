@@ -24,6 +24,7 @@ namespace WiClass
 {
     public partial class Main : Form
     {
+        public static Form f;
         private int ibtselect = 0; //互动操作按钮选中状态0：全部未选中，1：书写，2：选择，3测试
 
         #region 下方工具栏按钮对应的选中状态定义 2017-11-30 高峰
@@ -69,6 +70,7 @@ namespace WiClass
         /// </summary>
         private void init()
         {
+            f = this;
             picBackground.Image = Image.FromFile("Background/bg1.png");
             cmsStartMenu.Renderer = new clsMyMenuRender();
             m_bmp = new Bitmap(picBackground.Image);
@@ -261,6 +263,7 @@ namespace WiClass
 
         private void ucMini_Click(object sender, EventArgs e)
         {
+            
             this.Hide();
             frmMini fr = new frmMini();
             fr.Show();
