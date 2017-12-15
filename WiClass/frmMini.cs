@@ -19,104 +19,73 @@ namespace WiClass
     public partial class frmMini : Form
     {
 
-        Point frmLocation;//鼠标移动位置变量
-        Point mouseLocation;
-        bool leftFlag;//标签是否为左键
+        [DllImport("user32.dll")]
+        public static extern bool ReleaseCapture();
+        [DllImport("user32.dll")]
+        public static extern bool SendMessage(IntPtr hwnd, int wMsg, int wParam, int lParam);
+        public const int WM_SYSCOMMAND = 0x0112;
+        public const int SC_MOVE = 0xF010;
+        public const int HTCAPTION = 0x0002;
 
         public frmMini()
         {
             InitializeComponent();
-            init();
-           
-        }
-        public void init()
-        {
 
         }
-
- 
-
-
+       
         private void frmMini_Load(object sender, EventArgs e)
         {
-            
-            
+            ucMiniButton1.DrawBg();
+            this.Left = Screen.AllScreens[0].WorkingArea.Width-500;
+            this.Top = Screen.AllScreens[0].WorkingArea.Height - 200;
         }
 
- 
-
- 
-
-        private void panel1_MouseDown(object sender, MouseEventArgs e)
+        private void ucMiniButton1_BackgroundImageChanged(object sender, EventArgs e)
         {
-            if (e.Button == MouseButtons.Left)
+            try
             {
-                frmLocation = this.Location;
-                mouseLocation = Control.MousePosition; 
-                leftFlag = true; 
+                if (this.Created == false)
+                    return;
+                if (ucMiniButton1.BackgroundImage != null)
+                {
+                    Bitmap bm = new Bitmap(ucMiniButton1.BackgroundImage);
+                    DSAPI.控件.Form窗体.透明窗体样式显示图像(this, bm, 255);
+                }
+            }
+            catch
+            {
             }
         }
 
-        private void panel1_MouseMove(object sender, MouseEventArgs e)
+        private void ucMiniButton1_ItemClick(Class.proMyItem Itm)
         {
-            if (leftFlag)
+            switch (Itm.Itemid)
             {
-
-                Point pt = Control.MousePosition;
-                int rangeX = mouseLocation.X - pt.X;
-                int rangeY = mouseLocation.Y - pt.Y;
-                this.Location = new Point(frmLocation.X - rangeX, frmLocation.Y - rangeY);
-
+                case 0:
+                    //TODO：logo图标事件
+                    break;
+                case 1:
+                    //TODO：画笔图标事件
+                    break;
+                case 2:
+                    //TODO：橡皮图标事件
+                    break;
+                case 3:
+                    //TODO：清除图标事件
+                    break;
+                case 4:
+                    //TODO：最大化图标事件
+                    break;
+                default:
+                    break;
             }
         }
 
-        private void panel1_MouseUp(object sender, MouseEventArgs e)
+        private void ucMiniButton1_MouseMove(object sender, MouseEventArgs e)
         {
-            if (leftFlag)
-            {
-                leftFlag = false;//释放鼠标后标注为false;
-            }
+            ReleaseCapture();
+            SendMessage(this.Handle, WM_SYSCOMMAND, SC_MOVE + HTCAPTION, 0);
         }
-
-        #region 纯色填充
-        private void Draw(Rectangle rectangle, Graphics g, int _radius, Color bcolor)
-        {
-            int span = 2;
-            //抗锯齿
-            g.SmoothingMode = SmoothingMode.AntiAlias;
-            g.SmoothingMode = SmoothingMode.HighQuality;
-            g.InterpolationMode = InterpolationMode.HighQualityBicubic;
-            g.CompositingQuality = CompositingQuality.AssumeLinear;
-            SolidBrush mybrush = new SolidBrush(bcolor);
-            g.FillPath(mybrush, DrawRoundRect(rectangle.X, rectangle.Y, rectangle.Width - span, rectangle.Height - 2, _radius));
-        }
-        #endregion
-        #region 绘制圆角
-        public static GraphicsPath DrawRoundRect(int x, int y, int width, int height, int radius)
-        {
-            //四边圆角
-            GraphicsPath gp = new GraphicsPath();
-            gp.AddArc(x, y, radius, radius, 180, 90);
-            gp.AddArc(width - radius, y, radius, radius, 270, 90);
-            gp.AddArc(width - radius, height - radius, radius, radius, 0, 90);
-            gp.AddArc(x, height - radius, radius, radius, 90, 90);
-            gp.CloseFigure();
-            return gp;
-        }
-        #endregion
-        private void pnLogo_Paint(object sender, PaintEventArgs e)
-        {
-            Draw(e.ClipRectangle, e.Graphics, 15, Color.FromArgb(117,117, 117));
-            base.OnPaint(e);
-        }
-
-        private void pnLogoin_Paint(object sender, PaintEventArgs e)
-        {
-            Draw(e.ClipRectangle, e.Graphics, 10, Color.FromArgb(51, 51, 51));
-            base.OnPaint(e);
-        }
-
-
 
 
     }
